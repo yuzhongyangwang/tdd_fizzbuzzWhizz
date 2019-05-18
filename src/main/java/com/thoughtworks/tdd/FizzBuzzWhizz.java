@@ -3,13 +3,13 @@ package com.thoughtworks.tdd;
 public class FizzBuzzWhizz {
     public String fizzBuzz(int num){
         String result = "";
-        if(isTimesOf3(num)){
+        if(num % 3 == 0){
             result += "Fizz";
         }
-        if(isTimesOf5(num)){
+        if(num % 5 == 0){
             result += "Buzz";
         }
-        if(isTimesOf7(num)){
+        if(num % 7 == 0){
             result += "Whizz";
         }
         if(result.equals("")){
@@ -17,15 +17,4 @@ public class FizzBuzzWhizz {
         }
         return result;
     }
-
-    public boolean isTimesOf3(int num){
-        return num % 3 == 0;
-    }
-    public boolean isTimesOf5(int num){
-        return num % 5 == 0;
-    }
-    public boolean isTimesOf7(int num){
-        return num % 7 == 0;
-    }
-
 }
